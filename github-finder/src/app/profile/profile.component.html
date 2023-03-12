@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-3 col-sm-12">
+    <img src="{{ profile.avatar_url }}" alt="Profile Image" class="rounded-circle img-thumbnail profileImage"/>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <h5>{{ profile.name }}</h5>
+    <p>{{ profile.bio }}</p>
+    <p><span class="pi pi-map-marker me-1"></span>{{ profile.location }}</p>
+    <p><span class="pi pi-twitter me-1"></span><a href="https://twitter.com/{{ profile.twitter_username }}">{{ profile.twitter_username }}</a></p>
+    <p><span class="pi pi-github me-1"></span><a href="{{ profile.html_url }}">{{ profile.html_url }}</a></p>
+  </div>
+</div>

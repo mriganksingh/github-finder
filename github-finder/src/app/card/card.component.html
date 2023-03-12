@@ -1,0 +1,4 @@
+<p-card header="{{ repository.name }}" [style]="{'width': '35rem'}">
+  <p>{{ repository.description }}</p>
+  <span *ngFor="let topic of repository.topics"><p-tag class="mx-1" value="{{ topic }}"></p-tag></span>
+</p-card>

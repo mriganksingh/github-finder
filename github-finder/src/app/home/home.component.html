@@ -1,0 +1,18 @@
+<div class="container">
+  <app-searchbar (searchText)="onUserSearch($event)"></app-searchbar>
+  <div class="row" *ngIf="isLoading">
+    <app-skeleton></app-skeleton>
+  </div>
+  <div class="row" *ngIf="!isLoading">
+    <div class="col-sm-12 my-5">
+      <app-profile [profile]="profile"></app-profile>
+    </div>
+    <div *ngFor="let repository of repositories" class="col-md-6 col-sm-12 my-1 d-flex justify-content-center">
+      <app-card [repository]="repository"></app-card>
+    </div>
+  </div>
+  <div class="mt-1 d-flex justify-content-center">
+    <app-pagination [rows]="itemsPerPage" [totalRecords]="totalRepositories"
+                    (onPageChange)="paginate($event)"></app-pagination>
+  </div>
+</div>
